@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     }
                                 }
                                 ?>
-                            </select>
+                            </select>   
                         </div>
 
                         <button type="submit" class="btn btn-primary">Tambah</button>

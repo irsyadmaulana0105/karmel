@@ -1,0 +1,24 @@
+version: '3'
+services:
+  app:
+    image: php:7.4-fpm
+    container_name: karmel-app
+    volumes:
+      - .:/var/www/karmel
+    networks:
+      - karmel-net
+  nginx:
+    image: nginx:latest
+    container_name: karmel-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/karmel
+    depends_on:
+      - app
+    networks:
+      - karmel-net
+
+networks:
+  karmel-net:
+    driver: bridge

@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^$ login.php [L]
+RewriteRule ^$ index.php [L]
 
 
 <IfModule mod_rewrite.c>

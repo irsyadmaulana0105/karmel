@@ -33,7 +33,7 @@
                             </div>
                             <h4>Selamat Datang!!!</h4>
                             <h6 class="font-weight-light">Silahkan Sign In untuk melanjutkan!</h6>
-                            <form method="POST" action="auth/plogin" class="pt-3">
+                            <form method="POST" action="auth/plogin.php" class="pt-3">
                                 <div class="form-group">
                                     <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username" required>
                                 </div>
