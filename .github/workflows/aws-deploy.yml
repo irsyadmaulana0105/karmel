@@ -10,7 +10,7 @@ env:
   AWS_REGION: us-east-1
   EC2_HOST: 54.152.127.22 
   EC2_USER: ubuntu
-  DOCKER_IMAGE: miil/docker-ec2:latest
+  DOCKER_IMAGE: miil/docker-ec2
   DOCKER_TAG: latest
 
 jobs:
