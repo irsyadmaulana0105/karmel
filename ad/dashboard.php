@@ -237,7 +237,7 @@ $data6 = mysqli_fetch_assoc($nk6);
     <!-- Custom js for this page -->
     <!-- <script src="assets/js/chart.js"></script> -->
     <!-- <script src="assets/js/charts.js"></script> -->
-    <script src="assets/js/jchart.js"></script>
+    <!-- <script src="assets/js/jchart.js"></script> -->
     <!-- <script src="assets/js/barchart.js"></script> -->
     <!-- End custom js for this page -->
 </body>
@@ -247,7 +247,7 @@ $data6 = mysqli_fetch_assoc($nk6);
 var data = {
     labels: ["<?= $data1['nama'] ?>", "<?= $data2['nama'] ?>", "<?= $data3['nama'] ?>", "<?= $data4['nama'] ?>", "<?= $data5['nama'] ?>", "<?= $data6['nama'] ?>"],
     datasets: [{
-      label: 'Jumlah Klik Pengunjung',
+    //   label: 'Jumlah Klik Pengunjung',
       data: [<?= $data1['jumlah_klik'] ?>, <?= $data2['jumlah_klik'] ?>, <?= $data3['jumlah_klik'] ?>, <?= $data4['jumlah_klik'] ?>, <?= $data5['jumlah_klik'] ?>, <?= $data6['jumlah_klik'] ?>],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',

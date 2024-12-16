@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Pindahkan gambar ke direktori upload
     if (move_uploaded_file($gambar_tmp_name, $gambar_path)) {
         // Insert data ke database
-        $sql = "INSERT INTO tempat_wisata (nama, deskripsi, gambar, kategori_id) VALUES ('$nama', '$deskripsi', '$gambar_path', '$kategori_id')";
+        $sql = "INSERT INTO rekomendasi_bitung (kategori, nama, deskripsi, gambar, jumlah_klik) VALUES ('$kategori', '$nama', '$deskripsi', '$gambar', 0)";
         if ($conn->query($sql) === TRUE) {
             echo "Data berhasil ditambahkan.";
             // Redirect ke halaman lain jika proses berhasil
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input type="text" class="form-control file-upload-info" id="gambar-name" disabled placeholder="Upload Gambar">
                                 <label class="input-group-append">
                                     <span class="btn btn-gradient-primary">
-                                        Browse <input type="file" style="display: none;" name="gambar" id="gambar-input" required accept="image/*" class="file-upload-browse btn btn-gradient-primary">
+                                        Browse <input type="file" style="display: none;" name="gambar" id="gambar-input" class="file-upload-browse btn btn-gradient-primary">
                                     </span>
                                 </label>
                             </div>
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <select class="form-control" id="kategori" name="kategori" required>
                                 <option value="">Pilih Kategori</option>
                                 <?php
-                                // Mengambil data kategori yang unik dari tabel rekomendasi_bitung
+                                // Mengambil data kategori yang unik dari tabel tempat_wisata
                                 $kategori_sql = "SELECT DISTINCT kategori FROM rekomendasi_bitung";
                                 $kategori_result = $conn->query($kategori_sql);
 

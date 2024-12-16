@@ -15,15 +15,15 @@ if ($conn) {
     $tempat_id = $_POST['tempat_id'] ?? '';
 
     if (!empty($tempat_id)) {
-        $query = mysqli_prepare($conn, "SELECT * FROM tempat_wisata WHERE id = ?");
+        $query = mysqli_prepare($conn, "SELECT * FROM rekomendasi_bitung WHERE id = ?");
         mysqli_stmt_bind_param($query, "i", $tempat_id);
         mysqli_stmt_execute($query);
         $result = mysqli_stmt_get_result($query);
         $tempat = mysqli_fetch_assoc($result);
-        $kona = $tempat['encrypted_id'];
+        // $kona = $tempat['encrypted_id'];
 
         if ($tempat) {
-            $sql_update = "UPDATE tempat_wisata SET jumlah_klik = jumlah_klik + 1 WHERE id = ?";
+            $sql_update = "UPDATE rekomendasi_bitung SET jumlah_klik = jumlah_klik + 1 WHERE id = ?";
             $stmt_update = mysqli_prepare($conn, $sql_update);
             mysqli_stmt_bind_param($stmt_update, "i", $tempat_id);
             mysqli_stmt_execute($stmt_update);
@@ -44,35 +44,8 @@ if ($conn) {
                                 <p class="mb-4"><?php echo $tempat['deskripsi']; ?></p>
                             </div>
                         </div>
-                        <p><?php echo $tempat['deskripsi_full']; ?></p>
-
                     </div>
                 </div>
-                <div class="slider-container">
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="img/wisata/<?php echo $tempat['nama']; ?>/1.png" alt="Gambar 1">
-                            <!-- <div class="slide-caption">Ini adalah gambar ketiga</div> -->
-                        </div>
-                        <div class="slide">
-                            <img src="img/wisata/<?php echo $tempat['nama']; ?>/2.png" alt="Gambar 2">
-                            <!-- <div class="slide-caption">Ini adalah gambar ketiga</div> -->
-                        </div>
-                        <div class="slide">
-                            <img src="img/wisata/<?php echo $tempat['nama']; ?>/3.png" alt="Gambar 3">
-                        </div>
-                        <div class="slide">
-                            <img src="img/wisata/<?php echo $tempat['nama']; ?>/4.png" alt="Gambar 3">
-                        </div>
-                        <div class="slide">
-                            <img src="img/wisata/<?php echo $tempat['nama']; ?>/5.png" alt="Gambar 3">
-                        </div>
-                        <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
-                    </div>
-                    <button class="prev" onclick="prevSlide()">Previous</button>
-                    <button class="next" onclick="nextSlide()">Next</button>
-                </div>
-
             </div>
 <?php
         } else {

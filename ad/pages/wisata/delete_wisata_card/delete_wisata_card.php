@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['delete_id_card'])) {
     $delete_id = $_GET['delete_id_card'];
 
     // Hapus gambar terlebih dahulu
-    $sql_select_image = "SELECT gambar FROM tempat_wisata WHERE id='$delete_id'";
+    $sql_select_image = "SELECT gambar FROM rekomendasi_bitung WHERE id='$delete_id'";
     $result_select_image = $conn->query($sql_select_image);
     if ($result_select_image->num_rows > 0) {
         $row_image = $result_select_image->fetch_assoc();
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['delete_id_card'])) {
     }
 
     // Hapus data dari database
-    $sql_delete = "DELETE FROM tempat_wisata WHERE id='$delete_id'";
+    $sql_delete = "DELETE FROM rekomendasi_bitung WHERE id='$delete_id'";
     if ($conn->query($sql_delete) === TRUE) {
         // Redirect ke halaman lain jika proses berhasil
         echo "<script>window.location.href = '?q=wisata';</script>";

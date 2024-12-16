@@ -1,11 +1,11 @@
 <?php
 include './conf/conf.php';
 
-$sql = "SELECT * FROM tempat_wisata";
+$sql = "SELECT * FROM rekomendasi_bitung";
 $result = $conn->query($sql);
 $jumlah_tempat_wisata = mysqli_num_rows($result);
 
-$sql1 = "SELECT SUM(jumlah_klik) AS total_klik FROM tempat_wisata";
+$sql1 = "SELECT SUM(jumlah_klik) AS total_klik FROM rekomendasi_bitung";
 $result1 = $conn->query($sql1);
 $jumlah_pengunjung = mysqli_fetch_assoc($result1);
 
@@ -71,8 +71,8 @@ $jumlah_pesan = mysqli_num_rows($result2);
     <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Jumlah Pengunjung Tempat Wisata Bitung</h4>
-                    <canvas id="barChart" style="height:230px"></canvas>
+                    <!-- <h4 class="card-title">Jumlah Pengunjung Tempat Wisata Bitung</h4> -->
+                    <!-- <canvas id="barChart" style="height:230px"></canvas> -->
                   </div>
                 </div>
     </div>

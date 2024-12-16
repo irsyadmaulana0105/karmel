@@ -20,7 +20,7 @@
             ?>
 
             <!-- Dropdown untuk sortir berdasarkan kategori -->
-            <form action="http://localhost/karmel/" method="GET">
+            <form action="/" method="GET">
     <input type="hidden" name="q" value="rekom"> <!-- Menambahkan parameter q=rekom -->
     <select name="kategori" class="form-select mb-4" onchange="this.form.submit()">
         <option value="">-- Pilih Kategori --</option>

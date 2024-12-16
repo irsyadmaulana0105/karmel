@@ -3,20 +3,20 @@
 include '../conf/conn.php';
 
 
-$nk1 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '9'");
-$nk2 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '10'");
-$nk3 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '11'");
-$nk4 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '12'");
-$nk5 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '13'");
-$nk6 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '14'");
-$nk7 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '15'");
-$nk8 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '16'");
-$nk9 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '17'");
-$nk10 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '18'");
-$nk11 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '19'");
-$nk12 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '20'");
-$nk13 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '21'");
-$nk14 = mysqli_query($conn,"SELECT * FROM tempat_wisata WHERE id = '22'");
+$nk1 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '9'");
+$nk2 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '10'");
+$nk3 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '11'");
+$nk4 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '12'");
+$nk5 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '13'");
+$nk6 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '14'");
+$nk7 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '15'");
+$nk8 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '16'");
+$nk9 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '17'");
+$nk10 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '18'");
+$nk11 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '19'");
+$nk12 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '20'");
+$nk13 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '21'");
+$nk14 = mysqli_query($conn,"SELECT * FROM rekomendasi_bitung WHERE id = '22'");
 
 
 $data1 = mysqli_fetch_assoc($nk1);

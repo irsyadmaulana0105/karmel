@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit_id_card'])) {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $nama = $row['nama'];
+        $kategori = $row['kategori'];
         $deskripsi = $row['deskripsi'];
         $gambar = $row['gambar'];
         $kategori = $row['kategori'];
